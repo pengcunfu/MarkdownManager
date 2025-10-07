@@ -102,18 +102,31 @@ python mdupload.py example.md
 
 ## 配置信息
 
-在脚本顶部可以配置阿里云 OSS 的相关信息：
+### 配置文件设置
 
-```python
-ACCESS_KEY_ID = ''
-ACCESS_KEY_SECRET = ''
-ENDPOINT = 'https://oss-cn-beijing.aliyuncs.com'
-BUCKET_NAME = 'huaqiwill-daily-app'
-```
+1. 复制配置模板文件：
+   ```bash
+   cp resources/config.ini.example resources/config.ini
+   ```
 
-### 注意
+2. 编辑 `resources/config.ini` 文件，填入你的阿里云 OSS 配置信息：
+   ```ini
+   [default]
+   LOCAL_STORAGE = D:/Data/Markdown
+   STRATEGY = local
+   [oss]
+   ACCESS_KEY_ID = your_access_key_id_here
+   ACCESS_KEY_SECRET = your_access_key_secret_here
+   ENDPOINT = https://oss-cn-beijing.aliyuncs.com
+   BUCKET_NAME = your_bucket_name_here
+   ```
 
-请勿直接在生产环境中使用公开的 `ACCESS_KEY_ID` 和 `ACCESS_KEY_SECRET`，建议使用环境变量或配置文件的方式加载。
+### 安全注意事项
+
+⚠️ **重要提醒**：
+- `resources/config.ini` 文件已被添加到 `.gitignore` 中，不会被提交到版本控制系统
+- 请勿在代码中硬编码敏感信息（如 ACCESS_KEY_ID 和 ACCESS_KEY_SECRET）
+- 建议定期更换访问密钥以确保安全性
 
 ## 功能函数说明
 
