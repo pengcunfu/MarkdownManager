@@ -1,0 +1,8 @@
+[default]
+LOCAL_STORAGE = D:/Data/Markdown
+STRATEGY = local
+[oss]
+ACCESS_KEY_ID = your_access_key_id_here
+ACCESS_KEY_SECRET = your_access_key_secret_here
+ENDPOINT = https://oss-cn-beijing.aliyuncs.com
+BUCKET_NAME = your_bucket_name_here

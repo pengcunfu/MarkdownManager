@@ -18,3 +18,4 @@
 *.temp
 *.bak
 .idea/
+resources/config.ini
