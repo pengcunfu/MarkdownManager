@@ -19,3 +19,5 @@
 *.bak
 .idea/
 resources/config.ini
+node_modules/
+.vite/
